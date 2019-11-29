@@ -2,7 +2,7 @@
 
 Reanimated Library is a practice app for learning React Native Reanimated
 
-![](capture.gif)
+![](capture.gif | width=100)
 
 ## Installation
 
