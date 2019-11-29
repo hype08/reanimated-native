@@ -6,7 +6,7 @@ import {
   TransitioningView
 } from "react-native-reanimated";
 
-import { FlexibleCard, StyleGuide, cards } from "../components";
+import { FlexibleCard, StyleGuide, cards, Selection } from "../components";
 
 interface Layout {
   id: string;
@@ -81,6 +81,19 @@ export default () => {
           />
         ))}
       </Transitioning.View>
+      {layouts.map(({ id, name, layout }) => (
+        <Selection
+          key={id}
+          onPress={() => {
+            if (ref.current) {
+              ref.current.animateNextTransition();
+            }
+            setLayout(layout);
+          }}
+          isSelected={selectedLayout === layout}
+          {...{ name }}
+        />
+      ))}
     </>
   );
 };
