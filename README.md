@@ -2,6 +2,8 @@
 
 Reanimated Library is a practice app for learning React Native Reanimated
 
+![](capture.gif)
+
 ## Installation
 
 ```bash
